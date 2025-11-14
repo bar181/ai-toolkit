@@ -76,7 +76,7 @@ const Index = () => {
             <div className="space-y-4 text-base leading-relaxed opacity-90">
               <p>
                 <strong className="text-success">Not magic formulas.</strong> These prompts work because they solve 
-                specific problems I've encountered repeatedly. Copy them exactly, or adapt the structure to your context.
+                specific problems encountered repeatedly. Copy them exactly, or adapt the structure to your context.
               </p>
               <p>
                 <strong className="text-success">Iteration expected.</strong> First output is rarely final. The 
@@ -86,15 +86,32 @@ const Index = () => {
                 <strong className="text-success">Combine them.</strong> Real projects layer these together. 
                 Build a persona (Tab 2) → match platform (Tab 5) → adapt tone (Tab 3) → score output (Tab 6).
               </p>
-              <p className="pt-4">
-                <strong className="text-success">Why I built this:</strong> After teaching AI workshops and 
-                consulting on implementation, I kept returning to these six frameworks. They're simple enough 
-                to remember, specific enough to be useful, and flexible enough to adapt. If you get value from 
-                even one, it's served its purpose.
-              </p>
-              <p className="pt-4 text-sm opacity-75">
-                Questions, feedback, or consulting inquiries → bradley@example.com
-              </p>
+              <div className="pt-8 border-t border-code-text/20">
+                <h4 className="text-success text-lg font-semibold mb-4">Connect & Learn</h4>
+                <div className="space-y-3">
+                  <p>
+                    <a 
+                      href="https://www.linkedin.com/in/bradaross/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-success hover:underline font-medium"
+                    >
+                      Connect on LinkedIn
+                    </a>
+                  </p>
+                  <div>
+                    <p className="text-sm opacity-75 mb-1">Practical AI</p>
+                    <a 
+                      href="https://www.agenticlearninglabs.com/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-success hover:underline font-medium"
+                    >
+                      Agentic Learning Labs
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </footer>
         </div>

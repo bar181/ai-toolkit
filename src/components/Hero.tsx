@@ -1,6 +1,9 @@
+import Navigation from "./Navigation";
+
 const Hero = () => {
   return (
     <div className="relative bg-gradient-to-br from-primary to-primary-dark text-primary-foreground px-8 py-16 md:py-24 text-center overflow-hidden">
+      <Navigation />
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtNi42MjcgNS4zNzMtMTIgMTItMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMtMTItMTJ6bS0yNCAwYzAtNi42MjcgNS4zNzMtMTIgMTItMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMtMTItMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
       
       <div className="relative max-w-4xl mx-auto">
@@ -8,16 +11,8 @@ const Hero = () => {
           My AI Workflow Toolkit
         </h1>
         <h2 className="text-2xl md:text-3xl font-medium mb-8 opacity-95 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-150">
-          Six prompt frameworks I use daily for marketing, sales, and business content
+          Six prompt frameworks for marketing, sales, and business content
         </h2>
-        <p className="text-lg md:text-xl mb-8 opacity-90 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
-          After teaching AI to professionals and using it daily in my own work, I've narrowed down to these 
-          six workflows that consistently deliver results. These aren't theoretical—they're the exact prompts 
-          and techniques I use when I need to move from blank screen to polished output. Take what's useful.
-        </p>
-        <p className="text-base md:text-lg italic opacity-85 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500">
-          Bradley | Harvard ALM Digital Media Design | CS50 Teaching Fellow | Agentics Foundation
-        </p>
       </div>
     </div>
   );
