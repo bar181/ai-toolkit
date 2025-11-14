@@ -72,35 +72,57 @@ const Index = () => {
           </div>
 
           <footer className="bg-code-bg text-code-text px-8 md:px-16 py-12">
-            <h3 className="text-success text-2xl font-bold mb-6">How to Use This Toolkit</h3>
-            <div className="space-y-4 text-base leading-relaxed opacity-90">
-              <p>
-                <strong className="text-success">Not magic formulas.</strong> These prompts work because they solve 
-                specific problems encountered repeatedly. Copy them exactly, or adapt the structure to your context.
-              </p>
-              <p>
-                <strong className="text-success">Iteration expected.</strong> First output is rarely final. The 
-                workflow is: generate → select best → refine specifics → deploy.
-              </p>
-              <p>
-                <strong className="text-success">Combine them.</strong> Real projects layer these together. 
-                Build a persona (Tab 2) → match platform (Tab 5) → adapt tone (Tab 3) → score output (Tab 6).
-              </p>
-              <div className="pt-8 border-t border-code-text/20">
-                <h4 className="text-success text-lg font-semibold mb-4">Connect & Learn</h4>
-                <div className="space-y-3">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-success text-2xl font-bold mb-6">How to Use This Toolkit</h3>
+                <div className="space-y-4 text-base leading-relaxed opacity-90">
                   <p>
+                    <strong className="text-success">Not magic formulas.</strong> These prompts work because they solve 
+                    specific problems encountered repeatedly. Copy them exactly, or adapt the structure to your context.
+                  </p>
+                  <p>
+                    <strong className="text-success">Iteration expected.</strong> First output is rarely final. The 
+                    workflow is: generate → select best → refine specifics → deploy.
+                  </p>
+                  <p>
+                    <strong className="text-success">Combine them.</strong> Real projects layer these together. 
+                    Build a persona (Tab 2) → match platform (Tab 5) → adapt tone (Tab 3) → score output (Tab 6).
+                  </p>
+                  <div className="mt-6">
+                    <a
+                      href="/how-to"
+                      className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-lg bg-success/20 text-success border border-success/30 hover:bg-success/30 transition-colors"
+                    >
+                      Learn More
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-success text-2xl font-bold mb-6">About Bradley Ross</h3>
+                <div className="space-y-4 text-base leading-relaxed opacity-90">
+                  <p>
+                    Bradley Ross is a digital media designer and educator specializing in practical AI applications 
+                    for business and marketing. He combines academic rigor with real-world implementation experience.
+                  </p>
+                  <div className="space-y-2">
+                    <p><strong className="text-success">Education:</strong> Harvard ALM Digital Media Design</p>
+                    <p><strong className="text-success">Teaching:</strong> CS50 Teaching Fellow</p>
+                    <p><strong className="text-success">Organization:</strong> Agentics Foundation</p>
+                  </div>
+                  <div className="pt-4">
                     <a 
                       href="https://www.linkedin.com/in/bradaross/" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-success hover:underline font-medium"
+                      className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-lg bg-success/20 text-success border border-success/30 hover:bg-success/30 transition-colors"
                     >
                       Connect on LinkedIn
                     </a>
-                  </p>
-                  <div>
-                    <p className="text-sm opacity-75 mb-1">Practical AI</p>
+                  </div>
+                  <div className="pt-4">
+                    <p className="text-sm opacity-75">Practical AI Education</p>
                     <a 
                       href="https://www.agenticlearninglabs.com/" 
                       target="_blank" 
