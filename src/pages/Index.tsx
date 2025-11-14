@@ -115,22 +115,8 @@ const Index = () => {
                       Visit Agentic Learning Labs
                     </a>
                   </div>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-accent text-2xl font-bold mb-6">About the Instructor: Bradley Ross</h3>
-                <div className="space-y-4 text-base leading-relaxed opacity-90">
-                  <p>
-                    Bradley Ross is a digital media designer and educator specializing in practical AI applications 
-                    for business and marketing. He combines academic rigor with real-world implementation experience.
-                  </p>
-                  <div className="space-y-2">
-                    <p><strong className="text-accent">Education:</strong> Harvard ALM Digital Media Design</p>
-                    <p><strong className="text-accent">Teaching:</strong> CS50 Teaching Fellow</p>
-                    <p><strong className="text-accent">Organization:</strong> Agentics Foundation</p>
-                  </div>
-                  <div className="pt-4">
+                  <div className="pt-8 border-t border-accent/20 mt-8">
+                    <p className="text-accent font-semibold text-lg mb-3">Bradley Ross, Instructor</p>
                     <a 
                       href="https://www.linkedin.com/in/bradaross/" 
                       target="_blank" 
