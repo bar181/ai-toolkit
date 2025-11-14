@@ -12,7 +12,7 @@ const ExampleBox = ({ title, description }: ExampleBoxProps) => {
         <Lightbulb className="h-6 w-6 text-warning flex-shrink-0 mt-0.5" />
         <div>
           <strong className="text-warning block mb-2 text-base">{title}</strong>
-          <p className="text-foreground leading-relaxed">{description}</p>
+          <div className="text-foreground leading-relaxed whitespace-pre-line">{description}</div>
         </div>
       </div>
     </div>
