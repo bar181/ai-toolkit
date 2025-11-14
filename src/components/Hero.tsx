@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Navigation from "./Navigation";
-import thoughtHero from "@/assets/thought-hero.jpg";
+import thinkingLandscape from "@/assets/thinking-landscape.jpg";
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -21,7 +21,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 opacity-30"
         style={{
-          backgroundImage: `url(${thoughtHero})`,
+          backgroundImage: `url(${thinkingLandscape})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           transform: `translateY(${scrollY * 0.5}px)`,
