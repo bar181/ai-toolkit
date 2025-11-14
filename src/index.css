@@ -17,18 +17,22 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 27%;
 
-    --primary: 248 53% 58%;
+    --primary: 248 66% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 259 51% 51%;
+    --primary-dark: 259 61% 48%;
+    --primary-light: 248 76% 68%;
 
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 215 25% 27%;
+    --secondary: 280 65% 60%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 220 14% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 220 14% 96%;
-    --accent-foreground: 215 25% 27%;
+    --accent: 190 92% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    --highlight: 340 82% 52%;
+    --highlight-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
@@ -54,11 +58,15 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
     
-    --gradient-primary: linear-gradient(135deg, hsl(248 53% 58%), hsl(259 51% 51%));
-    --gradient-hero: linear-gradient(135deg, hsl(248 53% 58%) 0%, hsl(259 51% 51%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(248 66% 58%), hsl(259 61% 48%));
+    --gradient-hero: linear-gradient(135deg, hsl(248 66% 58%) 0%, hsl(280 65% 60%) 50%, hsl(259 61% 48%) 100%);
+    --gradient-vibrant: linear-gradient(135deg, hsl(190 92% 50%), hsl(248 76% 68%), hsl(340 82% 52%));
+    --gradient-card: linear-gradient(145deg, hsl(248 76% 68% / 0.1), hsl(280 65% 60% / 0.1));
     
     --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.15);
     --shadow-elevated: 0 10px 40px rgba(102, 126, 234, 0.2);
+    --shadow-glow: 0 0 60px rgba(102, 126, 234, 0.3);
+    --shadow-vibrant: 0 10px 40px rgba(6, 182, 212, 0.25);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -89,18 +97,22 @@ All colors MUST be HSL.
     --popover: 217 33% 17%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 248 53% 58%;
+    --primary: 248 66% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 259 51% 51%;
+    --primary-dark: 259 61% 48%;
+    --primary-light: 248 76% 68%;
 
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 280 65% 60%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 217 33% 17%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 217 33% 17%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 190 92% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    --highlight: 340 82% 52%;
+    --highlight-foreground: 0 0% 100%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;

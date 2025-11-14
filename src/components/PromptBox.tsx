@@ -23,9 +23,9 @@ const PromptBox = ({ label = "Prompt", content }: PromptBoxProps) => {
   };
 
   return (
-    <div className="bg-code-bg text-code-text rounded-xl p-6 my-6 font-mono text-sm leading-relaxed shadow-lg">
-      <div className="flex justify-between items-center mb-4 pb-3 border-b border-code-text/20">
-        <span className="text-success font-bold text-xs uppercase tracking-wider">
+    <div className="bg-gradient-to-br from-code-bg to-code-bg/95 text-code-text rounded-xl p-6 my-6 font-mono text-sm leading-relaxed shadow-lg border border-accent/20">
+      <div className="flex justify-between items-center mb-4 pb-3 border-b border-accent/30">
+        <span className="text-accent font-bold text-xs uppercase tracking-wider">
           {label}
         </span>
         <Button
@@ -33,8 +33,8 @@ const PromptBox = ({ label = "Prompt", content }: PromptBoxProps) => {
           size="sm"
           className={`transition-all ${
             copied
-              ? "bg-success hover:bg-success"
-              : "bg-primary hover:bg-primary-dark"
+              ? "bg-success hover:bg-success shadow-lg shadow-success/50"
+              : "bg-gradient-to-r from-accent to-primary hover:from-accent/90 hover:to-primary/90 shadow-md"
           }`}
         >
           {copied ? (

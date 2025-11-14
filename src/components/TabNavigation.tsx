@@ -6,19 +6,22 @@ interface TabNavigationProps {
 
 const TabNavigation = ({ activeTab, onTabChange, tabs }: TabNavigationProps) => {
   return (
-    <div className="sticky top-0 z-50 bg-secondary border-b-2 border-border shadow-sm">
+    <div className="sticky top-0 z-50 bg-gradient-to-r from-primary/5 via-accent/5 to-secondary/5 backdrop-blur-sm border-b-2 border-primary/20 shadow-md">
       <div className="flex overflow-x-auto">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => onTabChange(tab.id)}
-            className={`flex-1 min-w-[150px] px-6 py-5 border-b-3 font-semibold transition-all ${
+            className={`flex-1 min-w-[150px] px-6 py-5 font-semibold transition-all relative ${
               activeTab === tab.id
-                ? "border-primary bg-background text-primary"
-                : "border-transparent text-muted-foreground hover:bg-accent hover:text-primary"
+                ? "text-primary"
+                : "text-muted-foreground hover:text-primary"
             }`}
           >
-            {tab.label}
+            {activeTab === tab.id && (
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-primary to-secondary rounded-t-full shadow-lg" />
+            )}
+            <span className="relative z-10">{tab.label}</span>
           </button>
         ))}
       </div>
