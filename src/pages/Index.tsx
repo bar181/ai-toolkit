@@ -80,14 +80,6 @@ const Index = () => {
                     <strong className="text-accent">Not magic formulas.</strong> These prompts work because they solve 
                     specific problems encountered repeatedly. Copy them exactly, or adapt the structure to your context.
                   </p>
-                  <p>
-                    <strong className="text-accent">Iteration expected.</strong> First output is rarely final. The 
-                    workflow is: generate → select best → refine specifics → deploy.
-                  </p>
-                  <p>
-                    <strong className="text-accent">Combine them.</strong> Real projects layer these together. 
-                    Build a persona (Tab 2) → match platform (Tab 5) → adapt tone (Tab 3) → score output (Tab 6).
-                  </p>
                   <div className="mt-6">
                     <a
                       href="/how-to"
