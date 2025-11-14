@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, Copy, Check } from "lucide-react";
 import TimelineStep from "@/components/TimelineStep";
 import KanbanBoard from "@/components/KanbanBoard";
 import torontoTeam from "@/assets/toronto-team.jpg";
+import { useState } from "react";
 
 const HowTo = () => {
+  const [copiedLink, setCopiedLink] = useState<string | null>(null);
+
+  const copyToClipboard = (text: string, linkName: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedLink(linkName);
+    setTimeout(() => setCopiedLink(null), 2000);
+  };
+
   const steps = [
     {
       number: 1,
@@ -160,25 +169,55 @@ const HowTo = () => {
               {/* Edit Site Section */}
               <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto border border-primary-foreground/20">
                 <h2 className="text-2xl font-bold mb-4">Edit this Site yourself:</h2>
-                <div className="space-y-3">
-                  <a
-                    href="https://claude.ai/public/artifacts/b7f618b1-4669-48de-9fdb-ea9f99386d64"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 bg-primary-foreground text-primary px-6 py-3 rounded-lg hover:opacity-90 transition-opacity font-semibold"
-                  >
-                    <span>Claude Site - Main Page</span>
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                  <a
-                    href="https://claude.ai/public/artifacts/2487b541-d941-4147-b83a-c629791b8c0e"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 bg-primary-foreground text-primary px-6 py-3 rounded-lg hover:opacity-90 transition-opacity font-semibold"
-                  >
-                    <span>Claude Site - How To Page</span>
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
+                <div className="space-y-4">
+                  <div className="bg-primary-foreground text-primary p-4 rounded-lg">
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="text-left flex-1">
+                        <p className="font-semibold mb-1">Main Page:</p>
+                        <p className="text-sm break-all">https://claude.ai/public/artifacts/b7f618b1-4669-48de-9fdb-ea9f99386d64</p>
+                      </div>
+                      <button
+                        onClick={() => copyToClipboard("https://claude.ai/public/artifacts/b7f618b1-4669-48de-9fdb-ea9f99386d64", "main")}
+                        className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-semibold whitespace-nowrap"
+                      >
+                        {copiedLink === "main" ? (
+                          <>
+                            <Check className="w-4 h-4" />
+                            Copied
+                          </>
+                        ) : (
+                          <>
+                            <Copy className="w-4 h-4" />
+                            Copy Link
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  </div>
+                  <div className="bg-primary-foreground text-primary p-4 rounded-lg">
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="text-left flex-1">
+                        <p className="font-semibold mb-1">How To Page:</p>
+                        <p className="text-sm break-all">https://claude.ai/public/artifacts/2487b541-d941-4147-b83a-c629791b8c0e</p>
+                      </div>
+                      <button
+                        onClick={() => copyToClipboard("https://claude.ai/public/artifacts/2487b541-d941-4147-b83a-c629791b8c0e", "howto")}
+                        className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-semibold whitespace-nowrap"
+                      >
+                        {copiedLink === "howto" ? (
+                          <>
+                            <Check className="w-4 h-4" />
+                            Copied
+                          </>
+                        ) : (
+                          <>
+                            <Copy className="w-4 h-4" />
+                            Copy Link
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
