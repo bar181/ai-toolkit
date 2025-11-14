@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import TimelineStep from "@/components/TimelineStep";
 import KanbanBoard from "@/components/KanbanBoard";
+import torontoTeam from "@/assets/toronto-team.jpg";
 
 const HowTo = () => {
   const steps = [
@@ -129,22 +130,58 @@ const HowTo = () => {
       <div className="max-w-7xl mx-auto">
         <div className="bg-background rounded-3xl shadow-2xl overflow-hidden my-8 mx-4 md:mx-8">
           {/* Header */}
-          <div className="relative bg-gradient-to-br from-primary via-primary-dark to-secondary text-primary-foreground px-8 py-16 text-center">
+          <div className="relative bg-gradient-to-br from-primary via-primary-dark to-secondary text-primary-foreground px-8 py-16 text-center overflow-hidden">
             <Link
               to="/"
-              className="absolute top-6 left-8 flex items-center gap-2 text-primary-foreground/90 hover:text-primary-foreground transition-colors"
+              className="absolute top-6 left-8 flex items-center gap-2 text-primary-foreground/90 hover:text-primary-foreground transition-colors z-10"
             >
               <ArrowLeft className="w-5 h-5" />
               <span>Back to Toolkit</span>
             </Link>
 
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              🚀 How We Built the AI Toolkit Website
-            </h1>
-            <p className="text-xl opacity-90">
-              From 163-page course document to interactive website in 6
-              strategic steps
-            </p>
+            <div className="relative z-10">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                🚀 How We Built the AI Toolkit Website
+              </h1>
+              <p className="text-xl opacity-90 mb-8">
+                From 163-page course document to interactive website in 6
+                strategic steps
+              </p>
+
+              {/* Toronto Team Image */}
+              <div className="max-w-4xl mx-auto mb-8">
+                <img
+                  src={torontoTeam}
+                  alt="Happy collaborative team in Toronto"
+                  className="rounded-2xl shadow-2xl w-full h-auto"
+                />
+              </div>
+
+              {/* Edit Site Section */}
+              <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto border border-primary-foreground/20">
+                <h2 className="text-2xl font-bold mb-4">Edit this Site yourself:</h2>
+                <div className="space-y-3">
+                  <a
+                    href="https://claude.ai/public/artifacts/b7f618b1-4669-48de-9fdb-ea9f99386d64"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 bg-primary-foreground text-primary px-6 py-3 rounded-lg hover:opacity-90 transition-opacity font-semibold"
+                  >
+                    <span>Claude Site - Main Page</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://claude.ai/public/artifacts/2487b541-d941-4147-b83a-c629791b8c0e"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 bg-primary-foreground text-primary px-6 py-3 rounded-lg hover:opacity-90 transition-opacity font-semibold"
+                  >
+                    <span>Claude Site - How To Page</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="px-6 md:px-12 py-12 md:py-16 max-w-6xl mx-auto">
