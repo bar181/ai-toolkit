@@ -7,11 +7,11 @@ interface ExampleBoxProps {
 
 const ExampleBox = ({ title, description }: ExampleBoxProps) => {
   return (
-    <div className="bg-warning-light border-l-4 border-warning rounded-lg p-6 my-6">
+    <div className="bg-gradient-to-br from-secondary/10 to-primary-light/10 border-l-4 border-secondary rounded-lg p-6 my-6 shadow-md hover:shadow-lg transition-shadow">
       <div className="flex items-start gap-3">
-        <Lightbulb className="h-6 w-6 text-warning flex-shrink-0 mt-0.5" />
+        <Lightbulb className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" />
         <div>
-          <strong className="text-warning block mb-2 text-base">{title}</strong>
+          <strong className="text-secondary block mb-2 text-base">{title}</strong>
           <div className="text-foreground leading-relaxed whitespace-pre-line">{description}</div>
         </div>
       </div>
