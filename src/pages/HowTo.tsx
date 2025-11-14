@@ -147,18 +147,11 @@ const HowTo = () => {
             </p>
           </div>
 
-          <div className="px-8 md:px-16 py-12 md:py-16">
-            {/* Timeline */}
-            <div className="relative">
-              {/* Vertical line */}
-              <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-1 h-full bg-primary/20"></div>
-
-              {steps.map((step, index) => (
-                <TimelineStep
-                  key={step.number}
-                  {...step}
-                  isEven={index % 2 === 1}
-                />
+          <div className="px-6 md:px-12 py-12 md:py-16 max-w-6xl mx-auto">
+            {/* Timeline Steps */}
+            <div className="space-y-6">
+              {steps.map((step) => (
+                <TimelineStep key={step.number} {...step} />
               ))}
             </div>
 
