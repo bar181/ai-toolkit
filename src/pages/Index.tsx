@@ -100,7 +100,26 @@ const Index = () => {
               </div>
 
               <div>
-                <h3 className="text-accent text-2xl font-bold mb-6">About Bradley Ross</h3>
+                <h3 className="text-accent text-2xl font-bold mb-6">Agentic Learning Labs</h3>
+                <div className="space-y-4 text-base leading-relaxed opacity-90">
+                  <p className="text-lg">
+                    Agentic Learning Labs delivers practical AI education for professionals.
+                  </p>
+                  <div className="pt-4">
+                    <a 
+                      href="https://www.agenticlearninglabs.com/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-lg bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:from-primary/90 hover:to-secondary/90 hover:scale-105 transition-all shadow-lg"
+                    >
+                      Visit Agentic Learning Labs
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-accent text-2xl font-bold mb-6">About the Instructor: Bradley Ross</h3>
                 <div className="space-y-4 text-base leading-relaxed opacity-90">
                   <p>
                     Bradley Ross is a digital media designer and educator specializing in practical AI applications 
@@ -119,17 +138,6 @@ const Index = () => {
                       className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-lg bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:from-primary/90 hover:to-secondary/90 hover:scale-105 transition-all shadow-lg"
                     >
                       Connect on LinkedIn
-                    </a>
-                  </div>
-                  <div className="pt-4">
-                    <p className="text-sm opacity-75">Practical AI Education</p>
-                    <a 
-                      href="https://www.agenticlearninglabs.com/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-accent hover:text-primary-light hover:underline font-medium transition-colors"
-                    >
-                      Agentic Learning Labs
                     </a>
                   </div>
                 </div>
