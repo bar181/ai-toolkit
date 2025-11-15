@@ -174,10 +174,10 @@ const HowTo = () => {
                     <div className="flex items-center justify-between gap-4">
                       <div className="text-left flex-1">
                         <p className="font-semibold mb-1">Main Page:</p>
-                        <p className="text-sm break-all">https://claude.ai/public/artifacts/b7f618b1-4669-48de-9fdb-ea9f99386d64</p>
+                        <p className="text-sm break-all">https://claude.ai/public/artifacts/3665574c-9095-496c-85e0-7689b41018e8</p>
                       </div>
                       <button
-                        onClick={() => copyToClipboard("https://claude.ai/public/artifacts/b7f618b1-4669-48de-9fdb-ea9f99386d64", "main")}
+                        onClick={() => copyToClipboard("https://claude.ai/public/artifacts/3665574c-9095-496c-85e0-7689b41018e8", "main")}
                         className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-semibold whitespace-nowrap"
                       >
                         {copiedLink === "main" ? (
