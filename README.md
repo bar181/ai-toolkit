@@ -1,4 +1,4 @@
-# **AI Workflow Toolkit: Practical Prompt Frameworks for Modern Marketing & Sales**
+# **AI Workflow Toolkit: Practical Prompt and Workflow Frameworks**
 
 **Tired of blank screens and generic AI advice? This toolkit provides six powerful, repeatable prompt frameworks to generate high-quality marketing, sales, and business content.**
 
