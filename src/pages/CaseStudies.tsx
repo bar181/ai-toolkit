@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Users, Database, Eye, ClipboardList, UserCircle, Presentation, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Users, Database, Eye, ClipboardList, UserCircle, Presentation, Lightbulb } from "lucide-react";
 import Navigation from "@/components/Navigation";
 
 interface Step {
@@ -10,7 +10,7 @@ interface Step {
   icon: React.ElementType;
   purpose: string;
   tasks: string[];
-  outputs: string[];
+  promptIdeas: string[];
 }
 
 const steps: Step[] = [
@@ -26,9 +26,11 @@ const steps: Step[] = [
       "Confirm roles using AI",
       "Generate and select a team name with a value proposition",
     ],
-    outputs: [
-      "Named team with clear responsibilities",
-      "Shared understanding of problem",
+    promptIdeas: [
+      "Here are our team members and skills: [list]",
+      "Case in one sentence: [text]",
+      "Confirm role fit and suggest responsibilities.",
+      "Then generate 5 elite team names with a value proposition and unique capabilities.",
     ],
   },
   {
@@ -43,9 +45,9 @@ const steps: Step[] = [
       "Upload and restate assumptions",
       "Identify what is testable vs uncertain",
     ],
-    outputs: [
-      "Trusted dataset",
-      "Clear assumptions in plain language",
+    promptIdeas: [
+      "Summarize dataset, confirm structure, check for missing values and inconsistencies, and verify totals match where possible.",
+      "Restate assumptions in plain language and flag what is testable vs uncertain.",
     ],
   },
   {
@@ -60,9 +62,11 @@ const steps: Step[] = [
       "Align analysis with team strengths and client needs",
       "Create a simple visualization",
     ],
-    outputs: [
-      "One-page decision context",
-      "First visual or interactive artifact",
+    promptIdeas: [
+      "Create a one page summary covering team, problem, decision, data, assumptions, and what a good recommendation looks like.",
+      "List 5 ways our team can provide most value and early insights.",
+      "Confirm the recommendations fit with our team strengths and client requirements.",
+      "Create an interactive artifact in html to visualize the key insights.",
     ],
   },
   {
@@ -77,9 +81,9 @@ const steps: Step[] = [
       "Identify any required research",
       "List all available insights",
     ],
-    outputs: [
-      "Clear plan with ownership",
-      "No confusion about next steps",
+    promptIdeas: [
+      "Create a step by step project plan for this data analytics case including roles, outputs, and simple quality checks.",
+      "Provide a list of all insights and findings based on our team strengths and case study requirements.",
     ],
   },
   {
@@ -94,9 +98,9 @@ const steps: Step[] = [
       "Confirm what evidence matters",
       "Decide what to include and exclude",
     ],
-    outputs: [
-      "Recommendation shaped for a real person",
-      "Focused scope",
+    promptIdeas: [
+      "Create a 3 step persona (demographics, lifestyle, and triggers) for the business owner and explain how it changes our data story.",
+      "Confirm what evidence matters most and what not to include.",
     ],
   },
   {
@@ -111,9 +115,8 @@ const steps: Step[] = [
       "Draft a decision-ready recommendation",
       "Self-evaluate for clarity and relevance",
     ],
-    outputs: [
-      "Decision-ready recommendation",
-      "Interactive presentation artifact",
+    promptIdeas: [
+      "Given our constraints, the data provided with assumption, and the persona, draft a decision ready recommendation and score it for clarity, relevance, and decision support with fixes.",
     ],
   },
 ];
@@ -229,17 +232,24 @@ const CaseStudies = () => {
                     </ul>
                   </div>
 
-                  {/* Output Section */}
-                  <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-2xl p-6 border border-green-500/20">
-                    <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-green-600" />
-                      Output:
+                  {/* Prompt Ideas Section */}
+                  <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-2xl p-6 border border-amber-500/20">
+                    <h3 className="text-lg font-bold text-foreground mb-2 flex items-center gap-2">
+                      <Lightbulb className="w-5 h-5 text-amber-600" />
+                      Prompt Ideas
                     </h3>
+                    <p className="text-sm text-muted-foreground mb-4 italic">
+                      These are starting points — adapt them to your own context and style.
+                    </p>
                     <ul className="space-y-3">
-                      {currentStep.outputs.map((output, index) => (
+                      {currentStep.promptIdeas.map((prompt, index) => (
                         <li key={index} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                          <span className="text-foreground leading-relaxed font-medium">{output}</span>
+                          <div className="flex-shrink-0 w-6 h-6 bg-amber-500/20 rounded-full flex items-center justify-center mt-0.5">
+                            <span className="text-xs font-bold text-amber-700">{index + 1}</span>
+                          </div>
+                          <span className="text-foreground leading-relaxed bg-background/50 px-3 py-2 rounded-lg border border-amber-500/10 font-mono text-sm">
+                            {prompt}
+                          </span>
                         </li>
                       ))}
                     </ul>
