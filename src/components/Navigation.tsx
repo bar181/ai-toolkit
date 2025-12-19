@@ -4,7 +4,15 @@ const Navigation = () => {
   const location = useLocation();
   
   return (
-    <nav className="absolute top-6 right-8 z-10">
+    <nav className="absolute top-6 right-8 z-10 flex gap-6">
+      <Link 
+        to="/case-studies"
+        className={`text-primary-foreground/90 hover:text-primary-foreground font-medium transition-colors ${
+          location.pathname === "/case-studies" ? "underline" : ""
+        }`}
+      >
+        Case Studies
+      </Link>
       <Link 
         to="/how-to"
         className={`text-primary-foreground/90 hover:text-primary-foreground font-medium transition-colors ${
