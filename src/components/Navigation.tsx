@@ -14,6 +14,14 @@ const Navigation = () => {
         Case Studies
       </Link>
       <Link 
+        to="/data-prompts"
+        className={`text-primary-foreground/90 hover:text-primary-foreground font-medium transition-colors ${
+          location.pathname === "/data-prompts" ? "underline" : ""
+        }`}
+      >
+        Data Prompts
+      </Link>
+      <Link 
         to="/how-to"
         className={`text-primary-foreground/90 hover:text-primary-foreground font-medium transition-colors ${
           location.pathname === "/how-to" ? "underline" : ""
